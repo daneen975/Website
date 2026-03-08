@@ -20,6 +20,50 @@
       position: relative;
     }
 
+    /* Navigation Bar */
+    nav {
+      background-color: rgba(10, 13, 38, 0.95);
+      padding: 15px 40px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      border-bottom: 1px solid rgba(127, 139, 255, 0.2);
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      text-decoration: none;
+    }
+
+    .logo img {
+      height: 50px;
+      width: auto;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 30px;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+    }
+
+    .nav-links a {
+      color: #a0a9ff;
+      text-decoration: none;
+      font-size: 16px;
+      transition: color 0.3s;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
     /* Starfield background */
     .stars {
       position: fixed;
@@ -62,6 +106,7 @@
       background-clip: text;
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
+      margin-bottom: 20px;
     }
 
     .team-grid {
@@ -90,8 +135,18 @@
       height: 120px;
       border-radius: 50%;
       object-fit: cover;
+      object-position: center top;
       margin-bottom: 16px;
       border: 3px solid #7f8bff;
+    }
+
+    /* Special positioning for specific photos */
+    .photo-akshara {
+      object-position: center 20%;
+    }
+
+    .photo-rishabh {
+      object-position: center 25%;
     }
 
     .member-name {
@@ -130,6 +185,21 @@
 </head>
 <body>
 
+  <!-- Navigation Bar -->
+  <nav>
+    <a href="index.html" class="logo">
+      <img src="https://raw.githubusercontent.com/LunarisHacks/assets/main/logo.png" alt="Lunaris Hacks Logo">
+    </a>
+    <ul class="nav-links">
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="events.html">Events</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="meet_team.html">Meet the Team</a></li>
+      <li><a href="sponsors.html">Sponsors</a></li>
+      <li><a href="hack_the_case.html">Hack the Case</a></li>
+    </ul>
+  </nav>
+
   <!-- Star background -->
   <div class="stars" id="stars"></div>
 
@@ -138,10 +208,10 @@
     <h1 class="section-title">Meet the Team</h1>
 
     <div class="team-grid">
-      
+
       <!-- Akshara Patel -->
       <div class="member-card">
-        <img src="images/akshara.jpg" alt="Akshara Patel" class="member-photo">
+        <img src="images/akshara.jpg" alt="Akshara Patel" class="member-photophoto-akshara">
         <div class="member-name">Akshara Patel</div>
         <div class="member-role">Co-Founder</div>
         <div class="member-bio">
@@ -149,13 +219,14 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:akshara.patel@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
 
+
       <!-- Rishabh Mistry -->
       <div class="member-card">
-        <img src="images/rishabh.jpg" alt="Rishabh Mistry" class="member-photo">
+        <img src="images/rishabh.jpg" alt="Rishabh Mistry" class="member-photophoto-rishabh">
         <div class="member-name">Rishabh Mistry</div>
         <div class="member-role">Co-Founder</div>
         <div class="member-bio">
@@ -163,9 +234,10 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:rishabh.mistry@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
 
       <!-- Valencia -->
       <div class="member-card">
@@ -177,9 +249,62 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:vessoudasse@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
+
+      <!-- Prisha -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Prisha</div>
+        <div class="member-role">Co-VP Tech</div>
+        <div class="member-bio">
+          Contributing technical expertise and innovative solutions to our hackathon platform.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:prisha.thakkar@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Daneen -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Daneen</div>
+        <div class="member-role">Co-Director Tech</div>
+        <div class="member-bio">
+          Coordinating technical projects and supporting our development initiatives.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:daneen.ashaf@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
 
       <!-- Gajanan -->
       <div class="member-card">
@@ -191,9 +316,10 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:gajanan.vigneswaran@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
 
       <!-- Mehrsa -->
       <div class="member-card">
@@ -205,9 +331,10 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:mkarbasforushha@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
 
       <!-- Shubh -->
       <div class="member-card">
@@ -219,9 +346,10 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:skansara@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
 
       <!-- Tanisha Jogadia -->
       <div class="member-card">
@@ -233,9 +361,88 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:tanisha.jogadia@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
+
+      <!-- Shreya -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Shreya</div>
+        <div class="member-role">Associate Corporate Relations</div>
+        <div class="member-bio">
+          Supporting sponsorship initiatives and building corporate partnerships.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:shreya.gavande@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Smit Shah -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Smit Shah</div>
+        <div class="member-role">Associate Corporate Relations</div>
+        <div class="member-bio">
+          Engaging with sponsors and expanding our corporate network.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:smit.shah@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Melina Nazari -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Melina Nazari</div>
+        <div class="member-role">Associate Corporate Relations</div>
+        <div class="member-bio">
+          Developing relationships with corporate partners and supporting sponsorship efforts.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:melina.nazari@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
 
       <!-- Yachi -->
       <div class="member-card">
@@ -247,9 +454,10 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:ykumar@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
 
       <!-- Nishaa -->
       <div class="member-card">
@@ -261,9 +469,10 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:nishaa.badar@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
 
       <!-- Zara -->
       <div class="member-card">
@@ -275,9 +484,10 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:zumer@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
 
       <!-- Salwa -->
       <div class="member-card">
@@ -289,9 +499,10 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:salwa.mukhtar@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
+
 
       <!-- Trisha Benedict -->
       <div class="member-card">
@@ -303,7 +514,241 @@
         </div>
         <div class="contact-icons">
           <a href="mailto:tbenedict@torontomu.ca"><i class="fas fa-envelope"></i></a>
-          <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Henry Wang -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Henry Wang</div>
+        <div class="member-role">Associate Events</div>
+        <div class="member-bio">
+          Contributing to event logistics and ensuring attendee engagement.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:henry2.wang@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Malak Ahmed -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Malak Ahmed</div>
+        <div class="member-role">Co-VP Marketing</div>
+        <div class="member-bio">
+          Leading marketing strategies and expanding our brand presence across platforms.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:malak1.ahmed@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Lamar Afify -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Lamar Afify</div>
+        <div class="member-role">Co-VP Marketing</div>
+        <div class="member-bio">
+          Driving creative campaigns and building our community through strategic outreach.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:lamar.afify@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Pavitra Sachdev -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Pavitra Sachdev</div>
+        <div class="member-role">Director Marketing</div>
+        <div class="member-bio">
+          Coordinating marketing initiatives and creating engaging content for our audience.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:pavitra.sachdev@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Diya Verma -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Diya Verma</div>
+        <div class="member-role">Associate Marketing</div>
+        <div class="member-bio">
+          Supporting social media campaigns and community engagement efforts.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:diya.verma@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Mishri Mehta -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Mishri Mehta</div>
+        <div class="member-role">Associate Marketing</div>
+        <div class="member-bio">
+          Creating compelling visual content and managing our digital presence.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:mishri.k.mehta@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Tirth Patel -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Tirth Patel</div>
+        <div class="member-role">Associate Marketing</div>
+        <div class="member-bio">
+          Contributing to marketing campaigns and event promotion strategies.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:t13patel@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Tenzin Zompa -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Tenzin Zompa</div>
+        <div class="member-role">Associate Marketing</div>
+        <div class="member-bio">
+          Developing creative content and supporting our online community growth.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:tenzin.zompa@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
+        </div>
+      </div>
+
+
+      <!-- Kanika Dhingra -->
+      <div class="member-card">
+        <svg class="member-photo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200">
+          <defs>
+            <linearGradient id="moonGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+              <stop offset="0%" style="stop-color:#9ab8ff;stop-opacity:1" />
+              <stop offset="100%" style="stop-color:#b388ff;stop-opacity:1" />
+            </linearGradient>
+          </defs>
+          <circle cx="100" cy="100" r="90" fill="url(#moonGrad)" opacity="0.3"/>
+          <circle cx="100" cy="100" r="60" fill="#7f8bff" opacity="0.5"/>
+          <circle cx="85" cy="85" r="15" fill="#cbd5e1" opacity="0.4"/>
+          <circle cx="120" cy="110" r="10" fill="#cbd5e1" opacity="0.3"/>
+        </svg>
+        <div class="member-name">Kanika Dhingra</div>
+        <div class="member-role">Associate Marketing</div>
+        <div class="member-bio">
+          Enhancing brand visibility and coordinating promotional activities.
+        </div>
+        <div class="contact-icons">
+          <a href="mailto:k1dhingra@torontomu.ca"><i class="fas fa-envelope"></i></a>
+          <!-- <a href="#" target="_blank"><i class="fab fa-linkedin"></i></a> -->
         </div>
       </div>
 
